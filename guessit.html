@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <title>S575731</title>
+<body>
+<h1>Guess the color Venkata durga</h1>
+<form>
+    <label for="mysteryColor"> Guess the color : </label>
+    <input type="password" id="mysteryColor" value ="Red">
+    <label for="guessColor" > Enter a guess : </label>
+    <input type="text" id="guessColor">
+    <button type="button" onclick="processColor()">Check the color</button>
+</form>
+    <div id="guessing"></div>
+    <script>
+    let attempts = 0;
+    let wrong = 0;
+    function processColor(){
+        const mysteryColor = document.getElementById('mysteryColor').value;
+        const guessColor = document.getElementById('guessColor').value;
+        attempts++;
+        if(guessColor.toLowerCase() !== mysteryColor.toLowerCase()){
+        wrong++;
+            alert("Not matched");
+        }
+        else{
+            alert("Matched");
+        }
+        document.getElementById('guessing').innerHTML=Attempts : ${attempts}, wrong guess =${wrong};
+    }
+    </script><br>
+    <div>
+        <img id="plants" src="plant1.jpg" alt="PLANT 1" width="200" height="200" onclick="nextImage()">
+    </div>
+    <script>
+        let showing = 1;
+        function nextImage(){
+            switch(showing){
+            case 1: 
+            document.getElementById('plants').src='plant2.jpg';
+            showing = 2;
+            break;
+            case 2:
+                document.getElementById('plants').src='plant3.jpg';
+                showing = 3;
+                break;
+                case 3:
+                    document.getElementById('plants').src='plant1.jpg';
+                    showing = 1;
+                    break;
+            }
+        }
+    </script>
+
+
+
+</body>
+</html> 

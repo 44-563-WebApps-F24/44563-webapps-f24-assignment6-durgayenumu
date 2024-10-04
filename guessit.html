@@ -25,26 +25,26 @@
         else{
             alert("Matched");
         }
-        document.getElementById('guessing').innerHTML=Attempts : ${attempts}, wrong guess =${wrong};
+        document.getElementById('guessing').innerHTML=`No.of Attempts : ${attempts}, No.of wrong guess =${wrong}`;
     }
     </script><br>
     <div>
-        <img id="plants" src="plant1.jpg" alt="PLANT 1" width="200" height="200" onclick="nextImage()">
+        <img id="plants" src="Plant1.jfif" alt="1st Plant" width="200" height="200" onclick="nextImage()">
     </div>
     <script>
         let showing = 1;
         function nextImage(){
             switch(showing){
             case 1: 
-            document.getElementById('plants').src='plant2.jpg';
+            document.getElementById('plants').src='Plant2.jfif';
             showing = 2;
             break;
             case 2:
-                document.getElementById('plants').src='plant3.jpg';
+                document.getElementById('plants').src='Plant3.jfif';
                 showing = 3;
                 break;
                 case 3:
-                    document.getElementById('plants').src='plant1.jpg';
+                    document.getElementById('plants').src='Plant1.jfif';
                     showing = 1;
                     break;
             }
